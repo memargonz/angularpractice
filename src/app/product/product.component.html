@@ -1,1 +1,16 @@
 <p>product works!</p>
+ 
+<h2>Product List </h2>
+<h4>{{p_title }} is passed from parent</h4>
+<div>
+<li *ngFor= "let employee of employees"> {{employee.name}}</li>
+</div>
+<hr>
+<div>
+<li *ngFor= "let num of rNum | paginate: {itemsPerPage:itemsToDisplay, currentPage:page}"> {{num}}</li>
+<pagination-controls (pageChange)="pageChanged($event)"> </pagination-controls>
+</div>
+
+<label><input #newProduct> </label>
+<button (click) ="addProduct(newProduct.value)">Add Product</button>
+ 
