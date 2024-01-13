@@ -1,0 +1,12 @@
+<p>product works!</p>
+<label><input #myInput></label>
+<label><input [(ngModel)]="fName" type ="text"></label>
+<button (click) = "showMessage(myInput.value)">Click me</button>
+
+<div id="display"
+    *ngFor="let todo of todos"
+>
+<div>user ID: {{todo.userId}}</div><br>
+<div>Title: {{todo.title}}</div><br>
+<div>ID: {{todo.id}}</div><br>
+</div>
